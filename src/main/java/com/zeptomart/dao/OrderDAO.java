@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class OrderDAO {
 
     public boolean saveOrder(String userName, String userEmail, String items, double totalAmount) {
-        // 👇 NO user_id here anymore
+        
         String sql = "INSERT INTO orders (user_name, user_email, items, total_amount) VALUES (?, ?, ?, ?)";
 
         try (Connection con = DBUtil.getConnection();
@@ -17,7 +17,7 @@ public class OrderDAO {
 
             ps.setString(1, userName);
             ps.setString(2, userEmail);
-            ps.setString(3, items);          // just the names string
+            ps.setString(3, items);          
             ps.setDouble(4, totalAmount);
 
             int rows = ps.executeUpdate();
