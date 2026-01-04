@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Sign Up</title>
+    <link rel="stylesheet" href="./Sign_up.css">
+</head>
+<body>
+    
+    <div id="Container">
+        <!-- IMPORTANT: action="signup", method="post" -->
+        <form id="form-Data" autocomplete="on" action="signup" method="post">
+            <center><h1>Sign Up</h1></center> 
+            
+            <div class="form-field">
+                <label for="fn">First Name</label>
+                <input type="text" name="firstName" id="fn" placeholder="First Name">
+                <span class="error" id="fError"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="ln">Last Name</label>
+                <input type="text" name="lastName" id="ln" placeholder="Last Name">
+                <span class="error" id="lError"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass" placeholder="Password">
+                <span class="error" id="pError"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="cpass">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="cpass" placeholder="Confirm Password">
+                <span class="error" id="cError"></span>
+
+                <!-- Show passwords toggle -->
+                <label class="show-pass-label">
+                    <input type="checkbox" id="toggle-signup-pass">
+                    Show Passwords
+                </label>
+            </div>
+            
+            <div class="form-field">
+                <label for="mail">Email</label>
+                <input type="email" name="email" id="mail" placeholder="Email Id">
+                <span class="error" id="mError"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="date">Date of Birth</label>
+                <input type="date" name="dateOfBirth" id="date">
+                <span class="error" id="dError"></span>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit">Signup</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+            <div class="login-link">
+                Already Have an Account? <a href="index.html">Login</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./Sign_up.js"></script>
+</body>
+</html>

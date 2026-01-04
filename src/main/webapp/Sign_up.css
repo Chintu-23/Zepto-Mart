@@ -1,0 +1,136 @@
+/* Sign_up.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Background Container */
+#Container {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg, #1CB5E0 0%, #000851 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container */
+#form-Data {
+    width: 600px;
+    padding: 30px 40px;
+    background-image: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+}
+
+/* Heading */
+#form-Data h1 {
+    margin-bottom: 25px;
+    color: #000851;
+}
+
+/* Form Field */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    width: 350px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 0.7;
+}
+
+/* Input Fields */
+input {
+    width: 350px;
+    height: 30px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input.is-invalid {
+    border-color: red;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: #999;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 12px;
+    height: 15px; 
+    margin-top: 5px;
+    width: 350px;
+    text-align: left;
+}
+
+/* Show password label */
+.show-pass-label {
+    width: 350px;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+.show-pass-label input {
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* Buttons container */
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 35px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-image: linear-gradient(to right, #154D71, #000851);
+}
+
+/* Reset Button */
+button[type="reset"] {
+    background-image: linear-gradient(to right, #aaa, #888);
+}
+
+/* Login link styling */
+.login-link {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #154D71;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zepto-Mart Home</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="./Home.css">
+</head>
+
+<body>
+<header>
+    <nav class="nav-top">
+        <div class="socials">
+            <i class="fa-brands fa-facebook" style="color: #075ef2;"></i>
+            <i class="fa-brands fa-whatsapp" style="color: #04c311;"></i>
+            <i class="fa-brands fa-snapchat" style="color: #ffc905;"></i>
+            <i class="fa-solid fa-envelope" style="color: #03193f;"></i>
+            <i class="fa-brands fa-instagram" style="color: #d00643;"></i>
+        </div>
+
+        <!-- This will be replaced by JS if user is logged in -->
+        <div class="auth-buttons" id="auth-section">
+            <button onclick="window.location.href='index.html'">Login</button>
+            <button onclick="window.location.href='Sign_up.html'">Signup</button>
+        </div>
+    </nav>
+
+    <hr>
+
+    <nav class="nav-main">
+        <div id="grocery-categories">
+            <h1>Zepto-Mart</h1>
+            <div class="categories">
+                <button class="category-btn active" data-category="ALL">ALL</button>
+                <button class="category-btn" data-category="Fruits">Fruits</button>
+                <button class="category-btn" data-category="Vegetables">Vegetables</button>
+                <button class="category-btn" data-category="Nuts">Nuts</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="search-filter-bar">
+    <div class="search-filter-container">
+
+        <div class="search-sort-group">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search products...">
+            </div>
+
+            <button type="button" id="clear-filters-btn" class="clear-filters-btn">
+                Clear Filters
+            </button>
+
+            <div class="sort-select-wrapper">
+                <select name="sort-price" id="sort-price">
+                    <option value="default">Sort by</option>
+                    <option value="low-high">Price: Low-High</option>
+                    <option value="high-low">Price: High-Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="user-actions-group">
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i> Cart (0)
+            </button>
+            <i class="fa-solid fa-heart wishlist-icon" style="color: #e1091f;"></i>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<main id="product-grid">
+    <!-- Products rendered by Home.js -->
+</main>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="hidden">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items">
+        <p class="empty-cart-message">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+        <p>Total: <span id="cart-total">₹0.00</span></p>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+<div id="cart-overlay" class="hidden"></div>
+
+<!-- Hidden checkout form used by JS -->
+<form id="checkout-form" action="checkout" method="post" style="display:none;">
+    <input type="hidden" name="itemsJson" id="items-json-input">
+    <input type="hidden" name="totalAmount" id="total-amount-input">
+</form>
+
+<script src="./Home.js"></script>
+</body>
+</html>

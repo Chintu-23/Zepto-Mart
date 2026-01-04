@@ -1,0 +1,142 @@
+/* Login.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: sans-serif;
+}
+
+/* Background Container - Uses Flex to center the form */
+#Container {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg, #1CB5E0 0%, #000851 100%); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Form Container */
+#form-data {
+    width: 450px;
+    padding: 30px 40px; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); 
+    text-align: center;
+}
+
+/* Title */
+#form-data h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #262626;
+}
+
+/* Individual Form Field Structure */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-field label {
+    width: 300px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-field input {
+    width: 300px; 
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    font-size: 16px;
+}
+
+.form-field input.is-invalid {
+    border-color: #ff3860;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: #999;
+}
+
+/* Error messages */
+.error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 15px; 
+    margin-top: 5px;
+    width: 300px; 
+    text-align: left; 
+    display: block;
+}
+
+/* Show password label */
+.show-pass-label {
+    width: 300px;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+.show-pass-label input {
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* Buttons container */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Button Base Style */
+button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #0095f6;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background-color: #aaa;
+}
+
+/* Sign up link styling */
+.signup-link {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+.signup-link a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}

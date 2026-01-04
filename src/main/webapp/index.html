@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zepto Mart Login</title>
+    <link rel="stylesheet" href="./Login.css">
+</head>
+<body>
+    <div id="Container">
+        <!-- IMPORTANT: action="login", method="post" -->
+        <form id="form-data" action="login" method="post">
+            <h1>Login</h1>
+            
+            <div class="form-field">
+                <label for="username-input">Username / Email</label>
+                <input type="text" name="usernameOrEmail" id="username-input" placeholder="Username or Email">
+                <span class="error" id="uError"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass" placeholder="Password">
+                <span class="error" id="pError"></span>
+
+                <!-- Show password toggle -->
+                <label class="show-pass-label">
+                    <input type="checkbox" id="toggle-login-pass">
+                    Show Password
+                </label>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit" class="login-btn">Log In</button>
+                <button type="reset" class="cancel-btn">Cancel</button>
+            </div>
+            
+            <div class="signup-link">
+                <p>Don't Have an Account? <a href="./Sign_up.html">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="Login.js"></script>
+</body>
+</html>
