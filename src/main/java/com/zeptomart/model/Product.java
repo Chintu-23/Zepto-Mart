@@ -20,7 +20,7 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    // Getters & Setters
+    
 
     public int getId() {
         return id;
