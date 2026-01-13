@@ -10,7 +10,9 @@ i {
     font-size: 20px;
 }
 
-
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
 header {
     background-color: #006d77;
     color: #edf6f9;
@@ -73,8 +75,11 @@ header hr, body hr {
     border-color: #83c5be;
     background-color: rgba(255,255,255,0.2);
 }
- 
-/* search */
+
+/* ========================================= */
+/* SEARCH + SORT */
+/* ========================================= */
+
 .search-filter-bar {
     background: #edf6f9;
     display: flex;
@@ -208,9 +213,9 @@ header hr, body hr {
     font-size: 0.9rem;
 }
 
-
+/* ========================================= */
 /* CART SIDEBAR */
-
+/* ========================================= */
 
 #cart-sidebar {
     position: fixed;
